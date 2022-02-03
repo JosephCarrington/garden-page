@@ -7,7 +7,6 @@ import React, {
 import useWebSocket, { ReadyState } from "react-use-websocket";
 import { useLocalStorage } from "react-use";
 import "./App.css";
-import "../node_modules/react-vis/dist/style.css";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
@@ -28,6 +27,7 @@ import DashboardCombinedCard from "./components/DashboardCombinedCard";
 import { StorableDHT22Message } from "./types";
 
 import theme from "./theme";
+import PreviousDaysCard from "./components/PreviousDaysCard";
 
 const AppWithStorage: FunctionComponent = () => {
   return (
@@ -78,6 +78,9 @@ const App: FunctionComponent = () => {
           </Grid>
           <Grid item xs={12}>
             <DashboardCombinedCard />
+          </Grid>
+          <Grid item xs={12}>
+            {/* <PreviousDaysCard /> */}
           </Grid>
           <Grid item xs={2}>
             <Card>
